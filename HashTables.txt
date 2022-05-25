@@ -1,0 +1,19 @@
+A hash function takes a string of characters & maps it to a value of a certain length (hash/hash value)
+
+-------------------
+Good Hash function
+-------------------
+- easy to compute
+- uniform distribution
+- low collisions
+
+
+- A collision is when a key maps to a spot that is already taken
+    - A solution can be chaining, where each cell of the table points to a linked list
+        - simple to implement, hash tables never get full, cache performance for chaining isn't good
+        - mostly used when you don't know how many key slots will be needed
+
+    - Open addressing, where if the hash index for a key is available, insert directly into the table.
+        - if the index is taken, you will be probing until you find an empty index
+        - open addressing requires more computation, hash tables can get full, open addressing provides better cache performance
+        - mostly used when the frequency and number of keys is known
