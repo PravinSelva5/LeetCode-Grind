@@ -4,6 +4,7 @@ class Solution:
 
         for num in nums:
             if num in m:
+                # We can return True here.
                 m[num] += 1
             else:
                 m[num] = 1
