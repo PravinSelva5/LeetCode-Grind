@@ -37,6 +37,21 @@ class LinkedList:
         prev.next = target
         target.next = nextNode
 
+    def deleteNode(self, key):
+        temp = self.head
+        if temp is None:
+            return
+        if temp.data == key:
+            self.head = temp.next
+            temp = None
+            return
+        while temp.next.data != key:
+            temp = temp.next
+
+        target_node = temp.next
+        temp.next = target_node.next
+        target_node.next = None
+
 
 linked_list = LinkedList()
 linked_list.head = Node(5)
@@ -52,5 +67,9 @@ third_node.next = fourth_node
 linked_list.printList()
 
 linked_list.insertNode(3, 3)
+
+linked_list.printList()
+
+linked_list.deleteNode(3)
 
 linked_list.printList()
