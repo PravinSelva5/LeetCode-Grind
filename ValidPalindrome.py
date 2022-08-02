@@ -15,3 +15,22 @@ class Solution:
                 return False
 
         return True
+    
+    
+# Solution #2
+
+# class Solution:
+#     def isPalindrome(self, s: str) -> bool:
+#         modified_string = (''.join(filter(str.isalnum, s))).lower()
+        
+#         start = 0
+#         end = len(modified_string) - 1
+        
+#         while (end >= start):
+#             if modified_string[start] == modified_string[end]:
+#                 start += 1
+#                 end -= 1
+#             else:
+#                 return False
+        
+#         return True
