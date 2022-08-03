@@ -16,7 +16,6 @@ class Solution:
 
         return True
     
-    
 # Solution #2
 
 # class Solution:
