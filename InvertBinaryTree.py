@@ -28,3 +28,26 @@ class Solution:
         self.invert(root)
 
         return root
+    
+    
+    
+    # Attempt 2:
+    # ------------
+    # class Solution:
+    #     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+    #     if not root:
+    #         return None
+        
+    #     # swap children
+    #     tmp = root.left 
+    #     root.left = root.right 
+    #     root.right = tmp
+        
+    #     self.invertTree(root.left)
+    #     self.invertTree(root.right)
+        
+    #     return root
+        
+        
+        
+
