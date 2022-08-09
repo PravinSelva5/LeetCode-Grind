@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        result = [0]
+        diameter = [0]
         
         def dfs(root):
             
@@ -18,10 +18,10 @@ class Solution:
             right = dfs(root.right)
             
             # 
-            result[0] = max(result[0], 2 + left + right)
+            diameter[0] = max(diameter[0], 2 + left + right)
             
             # returning the height. We're adding 1 for the path connecting the node and its parent. 
             return 1 + max(left, right)
         
         dfs(root)
-        return result[0]
+        return diameter[0]
