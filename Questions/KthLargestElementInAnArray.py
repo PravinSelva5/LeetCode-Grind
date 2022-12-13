@@ -1,4 +1,3 @@
-# This is the quicksort solution but can't pass the leetcode test cases
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         # to get time complexity O(n) on average, is QuickSelect
@@ -20,10 +19,10 @@ class Solution:
             nums[end], nums[left] = nums[left], pivot
             
 
-            if nums[k] > pivot:
-                return quickSelect(left+1,end)
-            elif nums[k] < pivot:
+            if left > k:
                 return quickSelect(0,left-1)
+            elif left < k:
+                return quickSelect(left+1,end)
             else:
                 return nums[k]
             
