@@ -32,3 +32,13 @@ def spiralTraverse(array):
         endCol -= 1
 
     return result
+
+# Example of edge case
+# There is a single row in the middle of the matrix.
+# {
+#   "array": [
+#     [1, 2, 3, 4],
+#     [10, 11, 12, 5],
+#     [9, 8, 7, 6]
+#   ]
+# }
